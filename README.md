@@ -36,7 +36,7 @@ client0:
   extra_hosts:
     combiner: XXX.XXX.XX.XX
 ```
-Connect the client to the Reducer:
+Connect the client to the FEDn network:
 ```
 docker-compose up
 ```
@@ -57,10 +57,10 @@ Build the image:
 docker build . -t assist 
 ```
 
-Start the client in a container using this command (modify paths as necessary, and give the client a recognizable name (spaces, dashes and underscores in the name are not allowed): 
+Start the client in a container. Replace <IP> with the IP-address provided by the workshop host, and give the client a recognizable name (spaces, dashes and underscores in the name are not allowed): 
 
 ```
-docker run -v /home/ec2-user/ASSIST-workshop-120522/data/:/app/data:ro -v /home/ec2-user/ASSIST-workshop-120522/client.yaml:/app/client.yaml --add-host=combiner:185.189.28.44 --gpus all assist:latest /venv/bin/fedn run client -in client.yaml --name YOURNAME
+docker run -v /home/ec2-user/ASSIST-workshop-120522/data/:/app/data:ro -v /home/ec2-user/ASSIST-workshop-120522/client.yaml:/app/client.yaml --add-host=combiner:<IP> --gpus all assist:latest /venv/bin/fedn run client -in client.yaml --name YOURNAME
 ```
 
 
