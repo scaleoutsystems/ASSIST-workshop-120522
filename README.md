@@ -28,7 +28,7 @@ cd data
 ```
 unzip dataset.zip
 ```
-- Download the client.yaml file from XXX and put it in the ASSIST-workshop-120522 folder.
+- Download the client.yaml file from XXX and put it in the ASSIST-workshop-120522 folder (the easiest way is to use an editor such as vim and copy-paste the content).
 
 - Open the docker-compose.yaml in your prefered editor and add the server ip adress that the workshop host is providing you with, to the combiner namespace, line X:
 ```
@@ -48,10 +48,9 @@ Now wait for the workshop host to start training.
 This is an example of how we attached a client using a pre-configured GPU instance in AWS EC2. 
 We used the US East (N. Virginia) region, so you might need to adjust AMIs if you use a different region. 
 
-1. Launch a GPU-equipped intance using a Amazon Linux AMI preconfigured with Nvidia drivers and Nvidia-docker. We used g3.4xlarge (M60) and the AMI "Deep Learning AMI GPU CUDA 11.4.3 (Amazon Linux 2) 20220316".
-2. Follow the general instruction above to clone this repository and stage the dataset. 
-3. Create the client.yaml file (the easiest is to use an editor such as vim and copy-paste the content)
-4. This AMI does not come with docker-compose, so we will instead start the client using Docker: 
+1. Launch a GPU-equipped intance using a Amazon Linux AMI preconfigured with Nvidia drivers and Nvidia-docker. We used 'g3.4xlarge (M60)' and the AMI 'Deep Learning AMI GPU CUDA 11.4.3 (Amazon Linux 2) 20220316'.
+2. Follow the general instruction above to clone this repository, stage the dataset, and add 'client.yaml'. 
+3. This AMI does not come with docker-compose, so we will instead start the client using Docker: 
 
 Build the image:
 ```
@@ -63,5 +62,6 @@ Start the client in a container using this command (modify paths as necessary, a
 ```
 docker run -v /home/ec2-user/ASSIST-workshop-120522/data/:/app/data:ro -v /home/ec2-user/ASSIST-workshop-120522/client.yaml:/app/client.yaml --add-host=combiner:185.189.28.44 --gpus all assist:latest /venv/bin/fedn run client -in client.yaml --name YOURNAME
 ```
+
 
 
