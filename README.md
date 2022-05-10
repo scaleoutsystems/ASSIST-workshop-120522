@@ -3,7 +3,7 @@ Scaleouts ASSIST worskhop
 
 Prerequisites
 -------------
-You need a Linux system with a modern GPU, installed with the appropriate Nvidia drivers and Nvidia-docker. 
+You need a Linux system with Python 3.8, Docker and a modern GPU, installed with the appropriate Nvidia drivers and Nvidia-docker. 
 
 -  `Docker <https://docs.docker.com/get-docker>`
 -  `Docker Compose <https://docs.docker.com/compose/install>`
