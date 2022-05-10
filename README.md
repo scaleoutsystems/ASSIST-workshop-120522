@@ -41,7 +41,7 @@ Connect the client to the FEDn network:
 docker-compose up
 ```
 
-,or alternative:
+, or alternative:
 ```
 docker compose up
 ```
