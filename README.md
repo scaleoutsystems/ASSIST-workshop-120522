@@ -40,6 +40,12 @@ Connect the client to the FEDn network:
 ```
 docker-compose up
 ```
+
+,or alternative:
+```
+docker compose up
+```
+
 Make sure the terminal shows: "CLIENT active". 
 
 Now wait for the workshop host to start training.
