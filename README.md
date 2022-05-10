@@ -5,9 +5,9 @@ Prerequisites
 ------------
 You need a Linux system with Python 3.8, Docker and a modern GPU, installed with the appropriate Nvidia drivers and Docker, docker compose and Nvidia-docker.   
 
--  `Docker <https://docs.docker.com/get-docker>`
--  `Docker Compose <https://docs.docker.com/compose/install>`
--  `Python 3.8 <https://www.python.org/downloads>`
+-  [Docker](https://docs.docker.com/get-docker)
+-  [Docker Compose](https://docs.docker.com/compose/install)
+-  [A FEDn network (provided by the workshop host)](https://github.com/scaleoutsystems/fedn) 
 
 ## Join the federation
 
