@@ -2,8 +2,8 @@
 Scaleouts ASSIST worskhop
 
 Prerequisites
--------------
-You need a Linux system with Python 3.8, Docker and a modern GPU, installed with the appropriate Nvidia drivers and Nvidia-docker. 
+------------
+You need a Linux system with Python 3.8, Docker and a modern GPU, installed with the appropriate Nvidia drivers and Docker, docker compose and Nvidia-docker.   
 
 -  `Docker <https://docs.docker.com/get-docker>`
 -  `Docker Compose <https://docs.docker.com/compose/install>`
@@ -30,21 +30,21 @@ unzip dataset.zip
 ```
 - Download the client.yaml file from XXX and put it in the ASSIST-workshop-120522 folder.
 
-- Open the docker-compose.yaml in your prefered editor and add the server ip adress that the workshop is providing to you, to the combiner namespace, line X:
+- Open the docker-compose.yaml in your prefered editor and add the server ip adress that the workshop host is providing you with, to the combiner namespace, line X:
 ```
 client0:
   extra_hosts:
     combiner: XXX.XXX.XX.XX
 ```
-Connect to the Reducer server:
+Connect the client to the Reducer:
 ```
 docker-compose up
 ```
-Make sure the terminal shows: CLIENT active
-Now wait for the Reducer to start the federation.
+Make sure the terminal shows: "CLIENT active". 
+
+Now wait for the workshop host to start training.
 
 ### Join from an AWS EC2 GPU-enabled instance 
-
 This is an example of how we attached a client using a pre-configured GPU instance in AWS EC2. 
 We used the US East (N. Virginia) region, so you might need to adjust AMIs if you use a different region. 
 
