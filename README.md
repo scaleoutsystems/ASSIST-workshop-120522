@@ -38,9 +38,9 @@ client0:
 ```
 Open the docker-compose.yaml and add your name to the client, line 12:
 ```
-    command: /venv/bin/fedn run client --name <yourname> -in client.yaml
+    command: /venv/bin/fedn run client --name yourname -in client.yaml
 ```
-Replace <yourname> with your name. Dont use capitals or special characters.
+Replace yourname with your name. Dont use capitals or special characters.
 
 
 Connect the client to the FEDn network:
