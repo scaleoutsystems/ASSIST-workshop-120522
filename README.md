@@ -30,12 +30,19 @@ unzip dataset.zip
 ```
 - Download the client.yaml file from XXX and put it in the ASSIST-workshop-120522 folder (the easiest way is to use an editor such as vim and copy-paste the content).
 
-- Open the docker-compose.yaml in your prefered editor and add the server ip adress that the workshop host is providing you with, to the combiner namespace, line X:
+- Open the docker-compose.yaml in your prefered editor and add the server ip adress that the workshop host is providing you with, to the combiner namespace, line 5:
 ```
 client0:
   extra_hosts:
     combiner: XXX.XXX.XX.XX
 ```
+Open the docker-compose.yaml and add your name to the client, line 12:
+```
+    command: /venv/bin/fedn run client --name <yourname> -in client.yaml
+```
+Replace <yourname> with your name. Dont use capitals or special characters.
+
+
 Connect the client to the FEDn network:
 ```
 docker-compose up
