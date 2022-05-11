@@ -23,13 +23,17 @@ cd ASSIST-workshop-120522
 mkdir data
 cd data
 ```
-- Download your local dataset partition from XXX and move it to the data folder.
+- Download your local dataset partition from the google drive page and move it to the data folder.
 - Unzip your local dataset (inside the data folder):
 ```
 unzip dataset.zip
 ```
-- Download the client.yaml file from XXX and put it in the ASSIST-workshop-120522 folder (the easiest way is to use an editor such as vim and copy-paste the content).
+- Download the client.yaml file from the google drive page and put it in the ASSIST-workshop-120522 folder (the easiest way is to use an editor such as vim and copy-paste the content).
 
+- Add the host ip XXX.XXX.XX.XX to the client.yaml file, line 3:
+```
+discover_host: XXX.XXX.XX.XX
+```
 - Open the docker-compose.yaml in your prefered editor and add the server ip adress that the workshop host is providing you with, to the combiner namespace, line 5:
 ```
 client0:
